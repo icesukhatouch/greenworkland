@@ -1,0 +1,815 @@
+$primary-green: #616F53;
+$secondary-green: #DFE5E1;
+$primary-grey : #333333 ;
+$secondary-grey : #414141;
+$font-family-base : "Prompt",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$enable-responsive-font-sizes: true;
+
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+// section {
+//   overflow: hidden;
+// }
+footer {
+  // background-color: $secondary-green;
+  width: 100%;
+  position: absolute;
+  font-size: 0.5rem !important;
+}
+@include media-breakpoint-up(md) {
+  footer {
+    bottom: 10px !important;
+  }
+}
+@include media-breakpoint-down(lg){
+    a.anchor {
+      display: block;
+      position: relative;
+      top: -4.5rem;
+      visibility: hidden;
+  }
+}
+@include media-breakpoint-down(md){
+  footer {
+    bottom: auto;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  #navbarNavDropdown {
+    font-size: 85%;
+  }
+}
+.navbar-brand, .nav-link {
+  cursor: pointer;
+}
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition: opacity ease-out 1.7s;
+    }
+  }
+} 
+
+.carousel-fade {
+  .carousel-inner {
+    .active {
+      opacity: 1;
+    }
+  }
+}
+
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+.text-shadow {
+    text-shadow: 2px 2px 4px #000000;
+}
+.pt-6 {
+    padding-top: 6rem !important;
+}
+.pt-7 {
+    padding-top: 7rem !important;
+}
+.font-size-1 {
+    font-size: 1rem !important;
+}
+.font-size-2 {
+    font-size: 2rem !important;
+}
+.font-size-3 {
+    font-size: 3rem !important;
+}
+.img-shadow {
+    box-shadow: 1rem 1rem $primary-green;
+}
+#sub-menu {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  width: 100%;
+}
+
+@include media-breakpoint-down(lg) {
+  #sub-menu {
+    position: absolute;
+    top: 4rem;  
+  }
+}
+
+.sub-menu-wrap {
+    font-size: 0.9rem;
+    border-left: 1px solid;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    h5 {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    a {
+        color: black;
+        font-size: 70%;
+        cursor: pointer;
+    }
+}
+
+.logo {
+  max-width: 8rem;
+  height: auto;
+}
+// NAV
+@include media-breakpoint-up(lg) {
+  nav {
+    height: 10%;
+  }
+}
+
+.nav-link.active {
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+// ******************PAGE1******************
+.page1 {
+    background-image: url('assets/bg-top.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: $primary-grey 1rem solid;
+}
+
+@include media-breakpoint-down(sm) {
+    .bird {
+      max-width: 22% !important;
+      top: 37% !important;
+      right: 20% !important;
+    }
+    .tree {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .tree-top-2 {
+        height: 34%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+}
+@include media-breakpoint-down(md){
+    .tree-top {
+        height: auto;
+    }
+}
+// @include media-breakpoint-down(lg){
+//   .tree-top {
+//       max-width: 100% !important;
+//   }
+// }
+@keyframes pic-top {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes bird {
+  0% {top: -20rem; opacity: 0;}
+  100% {top: 25%; opacity: 1;}
+}
+@include media-breakpoint-down (sm) {
+  @keyframes bird {
+    0% {top: -20rem; opacity: 0;}
+    100% {top: 37%; opacity: 1;}
+  }
+}
+@keyframes tree-top {
+    0% {left: -20rem; opacity: 0;}
+    100% {left: 0; opacity: 1;}
+}
+@keyframes tree-top-2 {
+    0% {right: -20rem; opacity: 0;}
+    100% {right: 0; opacity: 1;}
+}
+.pic-top {
+  background-image: url('assets/top/pic-top.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: pic-top 2s 1;
+}
+.bird {
+  max-width: 13%;
+  position: absolute;
+  top: 25%;
+  right: 27%;
+  animation-name: bird;
+  animation-duration: 4s;
+  margin: auto;
+  width: 50%;
+}
+.tree-top {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 46%;
+    animation-name: tree-top;
+    animation-duration: 4s;
+
+}
+.tree-top-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation-name: tree-top-2;
+    animation-duration: 4s;
+
+}
+// ******************PAGE1******************
+
+// ******************PAGE2******************
+.page2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-indicators {
+  position: relative;
+  padding-top: 1.5rem;
+  li {
+      margin-right: 1rem;
+      margin-left: 1rem;
+      font-size: 1rem;
+      text-indent: 0px;
+      border: 0.2rem solid #333333;
+      width: 12rem;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      height: auto;
+      background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+@include media-breakpoint-down(sm) {
+  .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      li {
+        padding: 0;
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+      }
+  }
+    .locationCard {
+      font-size: 1rem !important;
+    }
+}
+@include media-breakpoint-up(sm) {
+  min-width: 58.33333% !important;
+}
+.vision {
+    background-color: rgba(97,111,83,0.2);
+    padding: 0;
+    p {
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 2rem;
+        font-size: 1.2rem;
+    }
+}
+@include media-breakpoint-up(sm) {
+  .work {
+    padding: 0rem 7rem !important;
+  }
+}
+@include media-breakpoint-down(md){
+  .vision {
+    background-color: transparent !important;
+    p {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-nav {
+    font-size: 0.75rem;
+  }
+}
+/* Wobble Vertical */
+@mixin hideTapHighlightColor() {
+	//Prevent highlight colour when element is tapped
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+@mixin hardwareAccel() {
+	//Improve performance on mobile/tablet devices
+	transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+	//Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+@keyframes wobble-vertical {
+	16.65% {
+		transform: translateY(8px);
+	}
+
+	33.3% {
+		transform: translateY(-6px);
+	}
+
+	49.95% {
+		transform: translateY(4px);
+	}
+
+	66.6% {
+		transform: translateY(-2px);
+	}
+
+	83.25% {
+		transform: translateY(1px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.wobble-vertical {
+	display: inline-block;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:hover {
+		animation-name: wobble-vertical;
+		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: 1;
+	}
+}
+
+.factory2 {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    z-index: 10;
+}
+.tree {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+#carouselExampleInterval {
+  z-index: 20;
+}
+@include media-breakpoint-down(md) {
+    .aboutUs{
+        .carousel-item {
+            height: 55rem;
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .factory2 {
+        display: none ;
+    }
+}
+
+.btn1 { 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 10rem; 
+    height: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+@include media-breakpoint-down(sm) {
+  .btn1 {
+    width: 7rem !important; 
+    height: 7rem !important;
+  }
+}
+.btn3d {
+    transition:all .08s linear;
+    position:relative;
+    outline:medium none;
+    border:0px;
+    margin-right:10px;
+    margin-top:15px;
+    &:focus {
+        outline:medium none;
+    }
+    &:active {
+        top:9px;
+    }
+}
+.btn-default {
+    box-shadow:0 0 0 1px $primary-green inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 $primary-green, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color:$primary-green;
+}
+.service {
+  p {
+      background-color: rgba(233, 238, 235, 0.8);
+      padding: 1rem;
+  }
+}
+.serviceWrap {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+@include media-breakpoint-down(sm) {
+  .serviceWrap {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    font-size: 0.9rem;
+  }
+  .img-service {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+.modal-body-work {
+  border: $primary-green 1rem solid;
+}
+.modal-body-trans {
+  background-color: $primary-grey;
+}
+.close-button {
+  font-size: 2.5rem;
+  float: right;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: white;
+}
+.close-button-work {
+  color: black !important;
+}
+.mark-green {
+  background-color: $secondary-green;
+  line-height: initial;
+}
+.mark-lightgreen {
+  background-color: #7bc13d;
+}
+.mark-red {
+  background-color:red; 
+  color:white;
+}
+.modal-dialog-work {
+  max-width: 40rem;
+}
+// ******************PAGE2******************
+// ******************PAGE3******************
+.page3 {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background-image: url('assets/transportation/jpg/2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
+  }
+}
+
+// ******************PAGE3******************
+
+
+// ******************PAGE6******************
+
+.page6 {
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "";
+      background-image: url('assets/customer/bgField.jpf'), url('assets/customer/bgField.webp'), url('assets/customer/bgField.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      will-change: transform;
+      z-index: -1;
+    }
+}
+.customerCard {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    flex: 1;
+    height: 10rem;
+    width: 10rem;
+    margin:1rem;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow:0.5rem 0.5rem 0.5rem $primary-grey;
+}
+.img-customer {
+    width: 50%;
+    height: auto;
+}
+
+.maps-btn {
+    background-color: $secondary-green;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.btn-primary-green{
+    background-color: $secondary-green !important;
+    border-color: $secondary-green !important;
+    color: black !important;
+    &:hover {
+        background-color: $secondary-grey !important;
+        color: white !important;
+    }
+}
+.img-fluid-this {
+    &-white-bg {
+        background-color: white;
+    }
+}
+
+@include media-breakpoint-down(md) {
+  .main {
+    section {
+      // overflow-x: hidden !important;
+      // overflow-y: visible !important;
+      height: 57rem !important;
+      &.page1 {
+        height: 100% !important;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+    .img-fluid-this {
+      height: 16rem !important;
+    }
+}
+
+.page4 {
+  background-image: url('assets/transportation/jpf/1.jpf'), url('assets/transportation/webp/1.webp'), url('assets/transportation/jpg/1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+    .btn-transportation {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        color: white;
+        border-top: 0.05rem solid white;
+        border-bottom: 0.05rem solid white;
+        border-radius: 0;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.5rem;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+//LOCATION
+.locationCard {
+    background-color: rgba(223,229,225,0.9);
+    box-shadow: 0.5rem 0.5rem 1rem black;
+    padding: 1.6rem 3rem;
+    margin: 0 auto 1rem auto;
+    font-size: 1.2rem;
+    text-align: initial;
+}
+.project-head {
+    border-left: $primary-grey 0.2rem solid;
+    padding-left: 1.5rem;
+    margin-bottom: -1rem;
+    margin-top: 2.5rem;
+    float: left;
+}
+@include media-breakpoint-up(sm){
+    .project-head {
+        margin-bottom: -2rem;
+    }
+
+}
+@include media-breakpoint-up(lg){
+    .project-head {
+        margin-bottom: -12rem;
+    }
+
+}
+.img-fluid-project {
+    width: 85%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: absolute;
+    top: 9rem;
+    left: 2rem;
+}
+@include media-breakpoint-up(md) {
+  .img-fluid-project {
+    top: 8rem;
+    left: 1rem;
+    width: 90%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .img-fluid-project {
+    top: 1rem;
+    left: 8rem;
+    width: 75%;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .img-fluid-project {
+    top: 1rem;
+    left: 9rem;
+    width: 70%;
+  }
+}
+
+a.customerCard {
+    &:hover {
+    color: black;
+    text-decoration: none;
+    }
+}
+
+iframe {
+  height: 16rem;
+  width: 50rem;
+}
+
+.close-button {
+  color: white;
+}
+
+//     -----------------------
+//     -----------------------
+// ---------------------------
+    html {
+      height: 100%;
+    }
+    body {
+      padding: 0;
+      position: relative;
+      margin: 0;
+      height: 100%;
+    }
+    
+    .wrapper {
+    	height: 100% !important;
+    	height: 100%;
+    	margin: 0 auto; 
+      overflow: hidden;
+      position: relative;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+
+    .main {
+      float: left;
+      width: 100%;
+      margin: 0 auto;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+
+    // .main section  {
+    //   overflow: hidden;
+    // }
+
+    // -------------------------------------------------
+  
+.career {
+  height: 100%;
+  text-align: center;
+  padding-top: 11rem;
+  display: none;
+  &.active {
+    display: block !important;
+  }
+  .card {
+    background-color: $secondary-green;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+}
+
+.page7 {
+  .carousel-indicators {
+    li {
+      padding: 0rem !important;
+    }
+  }
+}
+
+.carousel-fade {
+	.carousel-item {
+		display: block;
+		opacity: 0;
+    transition: opacity 0.75s ease-in;
+		&.active {
+      opacity: 1;
+      transition: opacity 0.2s ease-out;
+		}
+	}
+}
+
+@keyframes hideshow {
+  0% { opacity: 1; }
+  50% { opacity: 0;}
+  100% { opacity: 1; }
+} 
+.page5 {
+  .svgsvg {
+    svg {
+      z-index: 5000 !important;
+        .canClick {
+          animation: hideshow 1s ease-in-out infinite;
+        }
+        path {
+          fill: rgba(0, 0, 0, 0.3) !important;
+          opacity: 0 !important;
+          &:hover {
+            opacity: 1 !important;
+            cursor: pointer !important;
+          }
+        }
+    }
+  }
+}
+
+.soSmall {
+  .small {
+    font-size: 65%;
+  }
+}
+
+
+.trans1{
+  background-image: url('assets/transportation/jpf/1.jpf'), url('assets/transportation/webp/1.webp'), url('assets/transportation/jpg/1.jpg') !important;
+}
+.trans2{
+  background-image: url('assets/transportation/jpg/2.jpg') !important;
+}
+.trans3{
+  background-image: url('assets/transportation/jpf/3.jpf'), url('assets/transportation/webp/3.webp'), url('assets/transportation/jpg/3.jpg') !important;
+}
+.trans4{
+  background-image: url('assets/transportation/jpf/4.jpf'), url('assets/transportation/webp/4.webp'), url('assets/transportation/jpg/4.jpg') !important;
+}
+.trans5{
+  background-image: url('assets/transportation/jpf/5.jpf'), url('assets/transportation/webp/5.webp'), url('assets/transportation/jpg/5.jpg') !important;
+}
+.trans6{
+  background-image: url('assets/transportation/jpf/6.jpf'), url('assets/transportation/webp/6.webp'), url('assets/transportation/jpg/6.jpg') !important;
+}
+
+#lang {
+  svg {
+    width: 3rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.LangBtn {
+  svg {
+    width: 2rem;
+  }
+}
