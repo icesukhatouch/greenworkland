@@ -321,12 +321,6 @@ legend {
   white-space: normal;
 }
 
-@media (max-width: 1200px) {
-  legend {
-    font-size: calc(1.275rem + 0.3vw) ;
-  }
-}
-
 progress {
   vertical-align: baseline;
 }
@@ -378,40 +372,16 @@ h1, .h1 {
   font-size: 2.5rem;
 }
 
-@media (max-width: 1200px) {
-  h1, .h1 {
-    font-size: calc(1.375rem + 1.5vw) ;
-  }
-}
-
 h2, .h2 {
   font-size: 2rem;
-}
-
-@media (max-width: 1200px) {
-  h2, .h2 {
-    font-size: calc(1.325rem + 0.9vw) ;
-  }
 }
 
 h3, .h3 {
   font-size: 1.75rem;
 }
 
-@media (max-width: 1200px) {
-  h3, .h3 {
-    font-size: calc(1.3rem + 0.6vw) ;
-  }
-}
-
 h4, .h4 {
   font-size: 1.5rem;
-}
-
-@media (max-width: 1200px) {
-  h4, .h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
-  }
 }
 
 h5, .h5 {
@@ -433,22 +403,10 @@ h6, .h6 {
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
-  .display-1 {
-    font-size: calc(1.725rem + 5.7vw) ;
-  }
-}
-
 .display-2 {
   font-size: 5.5rem;
   font-weight: 300;
   line-height: 1.2;
-}
-
-@media (max-width: 1200px) {
-  .display-2 {
-    font-size: calc(1.675rem + 5.1vw) ;
-  }
 }
 
 .display-3 {
@@ -457,22 +415,10 @@ h6, .h6 {
   line-height: 1.2;
 }
 
-@media (max-width: 1200px) {
-  .display-3 {
-    font-size: calc(1.575rem + 3.9vw) ;
-  }
-}
-
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2;
-}
-
-@media (max-width: 1200px) {
-  .display-4 {
-    font-size: calc(1.475rem + 2.7vw) ;
-  }
 }
 
 hr {
@@ -6057,12 +6003,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   opacity: .5;
 }
 
-@media (max-width: 1200px) {
-  .close {
-    font-size: calc(1.275rem + 0.3vw) ;
-  }
-}
-
 .close:hover {
   color: #000;
   text-decoration: none;
@@ -10621,6 +10561,27 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+#mainNav .nav-item .nav-link {
+  cursor: pointer !important;
+}
+
+@media (min-width: 4000px) {
+  .img-fluid-project {
+    top: 1rem !important;
+    left: 15rem !important;
+    width: 62% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.2vw;
+  }
+  .modal-dialog {
+    max-width: 50%;
+  }
+}
+
 footer {
   width: 100%;
   position: absolute;
@@ -10637,8 +10598,14 @@ footer {
   a.anchor {
     display: block;
     position: relative;
-    top: -4.5rem;
+    top: -10% !important;
     visibility: hidden;
+  }
+}
+
+@media (max-width: 991.98px) {
+  a.anchor {
+    top: -24rem !important;
   }
 }
 
@@ -10651,6 +10618,10 @@ footer {
 @media (max-width: 1199.98px) {
   #navbarNavDropdown {
     font-size: 85%;
+  }
+  html {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 }
 
@@ -10678,14 +10649,6 @@ footer {
 
 .text-shadow {
   text-shadow: 2px 2px 4px #000000;
-}
-
-.pt-6 {
-  padding-top: 6rem !important;
-}
-
-.pt-7 {
-  padding-top: 7rem !important;
 }
 
 .font-size-1 {
@@ -10781,6 +10744,12 @@ footer {
     margin-right: auto;
     left: 0;
     right: 0;
+  }
+  .display-1 {
+    font-size: 3.5rem;
+  }
+  .project-head {
+    font-size: 12vw;
   }
 }
 
@@ -10917,8 +10886,10 @@ footer {
   right: 27%;
   -webkit-animation-name: bird;
           animation-name: bird;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
   margin: auto;
   width: 50%;
 }
@@ -10927,11 +10898,13 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  max-width: 46%;
+  max-width: 42%;
   -webkit-animation-name: tree-top;
           animation-name: tree-top;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .tree-top-2 {
@@ -10940,8 +10913,25 @@ footer {
   right: 0;
   -webkit-animation-name: tree-top-2;
           animation-name: tree-top-2;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+@media (min-width: 768px) {
+  .tree-top-2 {
+    max-width: 39%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tree-top {
+    width: 40vw;
+  }
+  .tree-top-2 {
+    width: 40vw;
+  }
 }
 
 .page2 {
@@ -11004,7 +10994,7 @@ footer {
 .vision p {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -11314,7 +11304,7 @@ footer {
 
 @media (max-width: 991.98px) {
   .main section {
-    height: 57rem !important;
+    height: 60rem !important;
   }
   .main section.page1 {
     height: 100% !important;
@@ -11323,7 +11313,7 @@ footer {
 
 @media (min-width: 768px) {
   .img-fluid-this {
-    height: 16rem !important;
+    height: 17vw !important;
   }
 }
 
@@ -11342,9 +11332,9 @@ footer {
   border-top: 0.05rem solid white;
   border-bottom: 0.05rem solid white;
   border-radius: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 .page4 .btn-transportation:hover {
@@ -11365,7 +11355,8 @@ footer {
   border-left: #333333 0.2rem solid;
   padding-left: 1.5rem;
   margin-bottom: -1rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
+  margin-left: 6vw;
   float: left;
 }
 
@@ -11388,7 +11379,7 @@ footer {
   margin-right: auto;
   display: block;
   position: absolute;
-  top: 9rem;
+  top: 7rem;
   left: 2rem;
 }
 
@@ -11402,17 +11393,26 @@ footer {
 
 @media (min-width: 992px) {
   .img-fluid-project {
-    top: 1rem;
-    left: 8rem;
-    width: 75%;
+    top: 0rem;
+    left: 10rem;
+    width: 70%;
   }
 }
 
 @media (min-width: 1200px) {
   .img-fluid-project {
     top: 1rem;
-    left: 9rem;
-    width: 70%;
+    left: 18rem;
+    width: 55%;
+  }
+  .factory2 {
+    width: 50vw;
+  }
+  .tree {
+    width: 50vw;
+  }
+  .img-service {
+    width: 20vw;
   }
 }
 
@@ -11422,7 +11422,7 @@ a.customerCard:hover {
 }
 
 iframe {
-  height: 16rem;
+  height: 17vw;
   width: 50rem;
 }
 
@@ -11547,7 +11547,7 @@ body {
 }
 
 .trans1 {
-  background-image: url("assets/transportation/jpf/1.jpf"), url("assets/transportation/webp/1.webp"), url("assets/transportation/jpg/1.jpg") !important;
+  background-image: url("assets/transportation/jpg/1.jpg") !important;
 }
 
 .trans2 {
@@ -11555,19 +11555,19 @@ body {
 }
 
 .trans3 {
-  background-image: url("assets/transportation/jpf/3.jpf"), url("assets/transportation/webp/3.webp"), url("assets/transportation/jpg/3.jpg") !important;
+  background-image: url("assets/transportation/jpg/3.jpg") !important;
 }
 
 .trans4 {
-  background-image: url("assets/transportation/jpf/4.jpf"), url("assets/transportation/webp/4.webp"), url("assets/transportation/jpg/4.jpg") !important;
+  background-image: url("assets/transportation/jpg/4.jpg") !important;
 }
 
 .trans5 {
-  background-image: url("assets/transportation/jpf/5.jpf"), url("assets/transportation/webp/5.webp"), url("assets/transportation/jpg/5.jpg") !important;
+  background-image: url("assets/transportation/jpg/5.jpg") !important;
 }
 
 .trans6 {
-  background-image: url("assets/transportation/jpf/6.jpf"), url("assets/transportation/webp/6.webp"), url("assets/transportation/jpg/6.jpg") !important;
+  background-image: url("assets/transportation/jpg/6.jpg") !important;
 }
 
 #lang svg {
@@ -11581,5 +11581,17 @@ body {
 
 .LangBtn svg {
   width: 2rem;
+}
+
+@media (max-width: 560px) {
+  .main .page5 {
+    height: 70% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .display-3 {
+    font-size: 12vw !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

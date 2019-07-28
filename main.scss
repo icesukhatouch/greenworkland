@@ -3,16 +3,35 @@ $secondary-green: #DFE5E1;
 $primary-grey : #333333 ;
 $secondary-grey : #414141;
 $font-family-base : "Prompt",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$enable-responsive-font-sizes: true;
+// $enable-responsive-font-sizes: true;
 
 
 
 @import "node_modules/bootstrap/scss/bootstrap";
+#mainNav {
+  .nav-item {
+    .nav-link {
+      cursor: pointer !important;
+    }
+  }
+}
+// for 21.5" screen
+@media (min-width: 4000px) {
+  .img-fluid-project {
+    top: 1rem !important;
+    left: 15rem !important;
+    width: 62% !important;
+  }
+}
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 1.2vw;
+  }
+  .modal-dialog {
+    max-width: 50%;
+  }
+}
 
-
-// section {
-//   overflow: hidden;
-// }
 footer {
   // background-color: $secondary-green;
   width: 100%;
@@ -28,8 +47,13 @@ footer {
     a.anchor {
       display: block;
       position: relative;
-      top: -4.5rem;
+      top: -10% !important;
       visibility: hidden;
+  }
+}
+@include media-breakpoint-down(md){
+    a.anchor {
+      top: -24rem !important;
   }
 }
 @include media-breakpoint-down(md){
@@ -41,6 +65,10 @@ footer {
 @include media-breakpoint-down(lg) {
   #navbarNavDropdown {
     font-size: 85%;
+  }
+  html {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 }
 .navbar-brand, .nav-link {
@@ -74,12 +102,6 @@ footer {
 }
 .text-shadow {
     text-shadow: 2px 2px 4px #000000;
-}
-.pt-6 {
-    padding-top: 6rem !important;
-}
-.pt-7 {
-    padding-top: 7rem !important;
 }
 .font-size-1 {
     font-size: 1rem !important;
@@ -168,17 +190,19 @@ footer {
         left: 0;
         right: 0;
     }
+    .display-1 {
+      font-size: 3.5rem;
+    }
+    .project-head {
+      font-size: 12vw;
+    }
 }
 @include media-breakpoint-down(md){
     .tree-top {
         height: auto;
     }
 }
-// @include media-breakpoint-down(lg){
-//   .tree-top {
-//       max-width: 100% !important;
-//   }
-// }
+
 @keyframes pic-top {
   0% {opacity: 0;}
   100% {opacity: 1;}
@@ -218,7 +242,8 @@ footer {
   top: 25%;
   right: 27%;
   animation-name: bird;
-  animation-duration: 4s;
+  animation-duration: 6s;
+  animation-delay: 5s;
   margin: auto;
   width: 50%;
 }
@@ -226,18 +251,32 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: 46%;
+    max-width: 42%;
     animation-name: tree-top;
-    animation-duration: 4s;
-
+    animation-duration: 6s;
+    animation-delay: 5s;
 }
 .tree-top-2 {
     position: absolute;
     bottom: 0;
     right: 0;
     animation-name: tree-top-2;
-    animation-duration: 4s;
+    animation-duration: 6s;
+    animation-delay: 5s;
+}
 
+@include media-breakpoint-up(md) {
+  .tree-top-2 {
+    max-width: 39%;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .tree-top {
+    width: 40vw;
+}
+  .tree-top-2 {
+      width: 40vw;
+  }
 }
 // ******************PAGE1******************
 
@@ -289,7 +328,7 @@ footer {
     p {
         background-color: rgba(255, 255, 255, 0.6);
         padding: 2rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 @include media-breakpoint-up(sm) {
@@ -561,7 +600,7 @@ footer {
     section {
       // overflow-x: hidden !important;
       // overflow-y: visible !important;
-      height: 57rem !important;
+      height: 60rem !important;
       &.page1 {
         height: 100% !important;
       }
@@ -570,7 +609,7 @@ footer {
 }
 @include media-breakpoint-up(md) {
     .img-fluid-this {
-      height: 16rem !important;
+      height: 17vw !important;
     }
 }
 
@@ -587,9 +626,9 @@ footer {
         border-top: 0.05rem solid white;
         border-bottom: 0.05rem solid white;
         border-radius: 0;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
         &:hover {
             background-color: rgba(0, 0, 0, 0.3);
         }
@@ -609,7 +648,8 @@ footer {
     border-left: $primary-grey 0.2rem solid;
     padding-left: 1.5rem;
     margin-bottom: -1rem;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
+    margin-left: 6vw;
     float: left;
 }
 @include media-breakpoint-up(sm){
@@ -622,7 +662,6 @@ footer {
     .project-head {
         margin-bottom: -12rem;
     }
-
 }
 .img-fluid-project {
     width: 85%;
@@ -631,7 +670,7 @@ footer {
     margin-right: auto;
     display: block;
     position: absolute;
-    top: 9rem;
+    top: 7rem;
     left: 2rem;
 }
 @include media-breakpoint-up(md) {
@@ -643,16 +682,25 @@ footer {
 }
 @include media-breakpoint-up(lg) {
   .img-fluid-project {
-    top: 1rem;
-    left: 8rem;
-    width: 75%;
+    top: 0rem;
+    left: 10rem;
+    width: 70%;
   }
 }
 @include media-breakpoint-up(xl) {
   .img-fluid-project {
     top: 1rem;
-    left: 9rem;
-    width: 70%;
+    left: 18rem;
+    width: 55%;
+  }
+  .factory2 {
+    width: 50vw;
+  }
+  .tree {
+    width: 50vw;
+  }
+  .img-service {
+    width: 20vw;
   }
 }
 
@@ -664,7 +712,7 @@ a.customerCard {
 }
 
 iframe {
-  height: 16rem;
+  height: 17vw;
   width: 50rem;
 }
 
@@ -780,22 +828,22 @@ iframe {
 
 
 .trans1{
-  background-image: url('assets/transportation/jpf/1.jpf'), url('assets/transportation/webp/1.webp'), url('assets/transportation/jpg/1.jpg') !important;
+  background-image: url('assets/transportation/jpg/1.jpg') !important;
 }
 .trans2{
   background-image: url('assets/transportation/jpg/2.jpg') !important;
 }
 .trans3{
-  background-image: url('assets/transportation/jpf/3.jpf'), url('assets/transportation/webp/3.webp'), url('assets/transportation/jpg/3.jpg') !important;
+  background-image: url('assets/transportation/jpg/3.jpg') !important;
 }
 .trans4{
-  background-image: url('assets/transportation/jpf/4.jpf'), url('assets/transportation/webp/4.webp'), url('assets/transportation/jpg/4.jpg') !important;
+  background-image: url('assets/transportation/jpg/4.jpg') !important;
 }
 .trans5{
-  background-image: url('assets/transportation/jpf/5.jpf'), url('assets/transportation/webp/5.webp'), url('assets/transportation/jpg/5.jpg') !important;
+  background-image: url('assets/transportation/jpg/5.jpg') !important;
 }
 .trans6{
-  background-image: url('assets/transportation/jpf/6.jpf'), url('assets/transportation/webp/6.webp'), url('assets/transportation/jpg/6.jpg') !important;
+  background-image: url('assets/transportation/jpg/6.jpg') !important;
 }
 
 #lang {
@@ -811,5 +859,19 @@ iframe {
 .LangBtn {
   svg {
     width: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .main {
+    .page5 {
+      height: 70% !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .display-3 {
+    font-size: 12vw !important;
   }
 }

@@ -182,7 +182,8 @@ function onePageScroll(element, options) {
   			startX = touches[0].pageX;
   			startY = touches[0].pageY;
   			document.addEventListener("touchmove", touchmove);
-  		}
+			}
+			window.requestAnimationFrame(touchstart);
   	}
   
   	function touchmove(event) {
@@ -212,7 +213,8 @@ function onePageScroll(element, options) {
   			if (Math.abs(deltaX) >= 50 || Math.abs(deltaY) >= 50) {
   				document.removeEventListener('touchmove', touchmove);
   			}
-  		}
+			}
+			window.requestAnimationFrame(touchmove);
   	}
   
   };
@@ -316,8 +318,14 @@ function onePageScroll(element, options) {
 			document.removeEventListener('mousewheel', _mouseWheelHandler);
 			document.removeEventListener('DOMMouseScroll', _mouseWheelHandler);
 			_swipeEvents(el);
-			document.removeEventListener("swipeDown");
-			document.removeEventListener("swipeUp");
+			document.removeEventListener("swipeDown",  function(event){
+			  if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
+				moveUp(el);
+			});
+			document.removeEventListener("swipeUp", function(event){
+				if (!_hasClass(body, "disabled-onepage-scroll")) event.preventDefault();
+				moveDown(el);
+			});
 			
 		} else {
 		  
